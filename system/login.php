@@ -20,6 +20,8 @@ if (isset($_POST['login'])) {
     if ($row = $result->fetch_assoc()) {
         session_start();
         $_SESSION['id_user'] = $row['id_user'];
+        $_SESSION['u'] = $u;
+        $_SESSION['p'] = $p;
         $_SESSION['firstname'] = $row['firstname'];
         $_SESSION['lastname'] = $row['lastname'];
         $_SESSION['id_role'] = $row['id_role'];

@@ -16,7 +16,7 @@
     <div class="bg bg2"></div>
     <div class="bg bg3"></div>
     <div class="content">
-        <section class="container" data-aos="zoom-in">
+        <section class="container">
             <center><img src="img/users.png" alt=""></center>
             <header>เข้าสู่ระบบ</header>
             <form action="system/login.php" method="post" class="form">
@@ -42,17 +42,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
-        AOS.init();
-
-        let reloadCount = sessionStorage.getItem('reloadCount') || 0;
-        reloadCount = parseInt(reloadCount);
-
-        if (reloadCount < 2) {
-            sessionStorage.setItem('reloadCount', reloadCount + 1); // เพิ่มตัวนับ
-            location.reload(); // รีเฟรชหน้า
-        } else {
-            sessionStorage.removeItem('reloadCount'); // ล้างค่าตัวนับเมื่อรีเฟรชครบ
-        }
 
         
         <?php session_start();
